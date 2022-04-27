@@ -31,11 +31,13 @@ p {
     font-size: 1.5rem;
     margin: 1rem 0;
 }
+
 em {
     font-style: italic;
     font-weight: 400;
 }
 
+/* banner and background||*/
 .background-splash {
     background-image: url(/images/space.jpg);
     background-size: cover;
@@ -73,6 +75,7 @@ em {
     font-size: .75rem;
 }
 
+/* form ||*/
 .form-header-info {
     display: flex;
     flex-direction: column;
@@ -81,15 +84,36 @@ em {
     padding: 0 8%;
 }
 
-main form {
-    height: 50vh;
+.form-area {
+    background: linear-gradient(307deg, rgb(51, 51, 51) 0%, rgb(68, 68, 68) 48%, rgba(51, 51, 51) 100%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
 
+form {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+}
+
+form div {
+    padding: 5% 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-area p {
+    padding: 8%;
+    margin: 0;
 }
 
 .form-button {
     height: 20vh;
 }
 
+
+/* media query with screen change ||*/
 @media screen and (max-width: 1000px) {
     body {
         flex-direction: column;
