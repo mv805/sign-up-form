@@ -7,6 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
         <title>Sign Up Now</title>
     </head>
 
@@ -16,8 +21,8 @@
                 <p>ODIN</p>
             </div>
             <div class="image-credit">Image credit:<a
-                    href="https://unsplash.com/photos/ln5drpv_ImI"></a>
-                Vincentiu Solomon on Unsplash</div>
+                    href="https://unsplash.com/photos/ln5drpv_ImI">Vincentiu Solomon on Unsplash</a>
+                </div>
         </div>
         <main>
             <div class="form-header-info">
@@ -28,10 +33,10 @@
             </div>
             <div class="form-area">
                 <p>Let's do this!</p>
-                <form action="#">
+                <form action="#" id="main-form">
                     <div>
                         <label for="first-name">First Name</label>
-                        <input type="text" name="firstName" id="first-name">
+                        <input type="text" name="firstName" id="first-name" required>
                     </div>
                     <div>
                         <label for="last-name">Last Name</label>
@@ -39,25 +44,26 @@
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div>
                         <label for="phone-number">Phone Number</label>
-                        <input type="text" name="phoneNumber" id="phone-number">
+                        <input type="text" name="phoneNumber" id="phone-number" pattern="\d{3}-\d{3}-\d{4}" placeholder="###-###-####" 
+                        title= "Needs to be in format of ###-###-####" required>
                     </div>
                     <div>
                         <label for="password">Password</label>
-                        <input type="text" name="password" id="password">
+                        <input type="password" name="password" id="password" required>
                     </div>
                     <div>
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="text" name="confirmPassword"
-                            id="confirm-password">
+                        <input type="password" name="confirmPassword"
+                            id="confirm-password" required>
                     </div>
                 </form>
             </div>
             <div class="form-button">
-                <button>Create Account</button>
+                <button type="submit" form="main-form">Create Account</button>
                 <p>Already have an account?<a href="#">Log In</a></p>
             </div>
         </main>
