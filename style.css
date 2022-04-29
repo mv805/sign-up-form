@@ -43,6 +43,14 @@ img {
     height: 80%;
 }
 
+a {
+    color: #5b4ecc;
+}
+
+a:visited {
+    color: #451f77;
+}
+
 /* banner and background||*/
 .background-splash {
     background-image: url(/images/space.jpg);
@@ -104,19 +112,13 @@ form {
 }
 
 form div {
-    padding: 3% var(--form-side-padding);
+    /* top | right | bottom | left */
+    padding: 3% 1% 0 var(--form-side-padding);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 15rem;
     height: 4rem;
-}
-a {
-    color: #5b4ecc;
-}
-
-a:visited {
-    color: #451f77;
 }
 
 .form-area p {
