@@ -9,6 +9,7 @@
     --banner-background-color: #000000ab;
     --main-font-color: rgb(207, 207, 207);
     --input-border-color: rgb(105, 105, 105);
+    --form-side-padding: 8%;
     
     font-family: 'Roboto', 'Times New Roman', sans-serif;
 }
@@ -17,13 +18,14 @@ body {
     background-color: var(--main-background-color);
     display: flex;
     color: var(--main-font-color);
+    min-height: 100vh;
 }
-
 
 main {
     width: 60vw;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 p {
@@ -35,6 +37,10 @@ p {
 em {
     font-style: italic;
     font-weight: 400;
+}
+
+img {
+    height: 80%;
 }
 
 /* banner and background||*/
@@ -81,13 +87,13 @@ em {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5% 8%;
+    padding: 5% var(--form-side-padding);
 }
 
 .form-area {
     background: linear-gradient(307deg, rgb(51, 51, 51) 0%, rgb(82, 82, 82) 48%, rgba(51, 51, 51) 100%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-    padding: 5% 0;
+    padding: 3% 0;
 }
 
 form {
@@ -98,21 +104,29 @@ form {
 }
 
 form div {
-    padding: 3% 8%;
+    padding: 3% var(--form-side-padding);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 15rem;
     height: 4rem;
 }
+a {
+    color: #5b4ecc;
+}
+
+a:visited {
+    color: #451f77;
+}
 
 .form-area p {
-    padding: 0% 8%;
+    padding: 0% var(--form-side-padding);
     margin: 0;
 }
 
 .form-button {
     height: 20vh;
+    margin: 0 var(--form-side-padding);
 }
 /* form, fields ||*/
 input {
@@ -144,7 +158,30 @@ label {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .1rem;
-}    
+}
+
+button {
+    font-family: inherit;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(92, 0, 92);
+    border-style: none;
+    border-radius: 2px;
+    color: var(--main-font-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 5%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(117, 0, 117);
+}
+
+button:active {
+    color: black;
+    background-color: rgb(255, 171, 255);
+}
 
 /* media query with screen change ||*/
 @media screen and (max-width: 1000px) {
